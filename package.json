@@ -4,13 +4,16 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build:css": "npx @tailwindcss/cli -i ./public/stylesheets/src/input.css -o ./public/stylesheets/output.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./public/stylesheets/src/input.css -o ./public/stylesheets/output.css --watch"
   },
   "dependencies": {
     "@prisma/client": "^7.9.1",
     "@tailwindcss/vite": "^4.3.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "ejs": "^6.0.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
@@ -18,6 +21,7 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "nodemon": "^3.1.10",
     "prisma": "^7.9.1"
   }
 }

@@ -1,5 +1,241 @@
-extends layout
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8b5a35">
+  <title><%= title %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/output.css">
+</head>
+<body class="bg-brand-50 font-sans text-stone-900 antialiased">
+  <!-- ===== NAVBAR ===== -->
+  <header class="sticky top-0 z-50 border-b border-brand-500/10 bg-white/85 backdrop-blur-xl">
+    <div class="mx-auto flex w-[min(100%-1.5rem,1180px)] items-center justify-between gap-4 py-4">
+      <a class="flex items-center gap-3" href="/" aria-label="BonaiUMKM home">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-400 font-semibold text-white shadow-soft">B</span>
+        <span class="leading-tight">
+          <strong class="block font-display text-2xl text-brand-700">TBA UMKM</strong>
+          <span class="block text-sm text-stone-500">Teras Bisnis Anak Nagari</span>
+        </span>
+      </a>
 
-block content
-  h1= title
-  p Welcome to #{title}
+      <button class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-brand-500/15 bg-white shadow-soft md:hidden" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+        <span class="sr-only">Buka menu</span>
+        <span class="relative block h-4 w-5">
+          <span class="absolute left-0 top-0 h-0.5 w-5 rounded-full bg-brand-700"></span>
+          <span class="absolute left-0 top-1.5 h-0.5 w-5 rounded-full bg-brand-700"></span>
+          <span class="absolute left-0 top-3 h-0.5 w-5 rounded-full bg-brand-700"></span>
+        </span>
+      </button>
+
+      <nav class="hidden items-center gap-8 text-sm font-semibold text-stone-500 md:flex">
+        <% menu.forEach(function(item) { %>
+          <a class="rounded-full px-3 py-2 transition hover:bg-brand-500/5 hover:text-brand-700" href="<%= item.href %>"><%= item.label %></a>
+        <% }); %>
+        <a class="rounded-full bg-brand-500 px-5 py-2.5 text-white shadow-lg shadow-brand-500/20 transition hover:bg-brand-600" href="#umkm">Admin</a>
+      </nav>
+    </div>
+
+    <nav id="mobile-nav" class="mx-auto hidden w-[min(100%-1.5rem,1180px)] flex-col gap-2 pb-4 md:hidden" data-mobile-nav>
+      <% menu.forEach(function(item) { %>
+        <a class="rounded-2xl border border-brand-500/10 bg-white px-4 py-3 font-medium text-stone-600 shadow-sm" href="<%= item.href %>"><%= item.label %></a>
+      <% }); %>
+      <a class="rounded-2xl bg-brand-500 px-4 py-3 font-semibold text-white shadow-lg shadow-brand-500/20" href="#umkm">Admin</a>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <!-- HERO -->
+    <section id="beranda" class="relative overflow-hidden py-14 md:py-20">
+      <div class="absolute inset-x-0 top-0 -z-10 h-[620px] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.96),transparent_34%),radial-gradient(circle_at_85%_18%,rgba(139,90,53,0.14),transparent_25%)]"></div>
+      <div class="mx-auto grid w-[min(100%-1.5rem,1180px)] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+        <div>
+          <span class="inline-flex items-center rounded-full bg-brand-500/10 px-4 py-2 text-sm font-bold tracking-wide text-brand-700">Katalog UMKM lokal terbaik</span>
+          <h1 class="mt-5 max-w-[12ch] font-display text-5xl font-black leading-[0.95] tracking-[-0.04em] text-stone-900 sm:text-6xl lg:text-[5.25rem]">Ragam UMKM Nagari Tanjung Bonai Aur</h1>
+          <p class="mt-5 max-w-2xl text-base leading-8 text-stone-600 sm:text-lg">Temukan kerajinan tangan, kuliner khas, dan produk berkualitas dari para pelaku usaha lokal dalam satu tampilan yang modern, cepat, dan nyaman di semua ukuran layar.</p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a class="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-500 px-6 py-3 font-semibold text-white shadow-lg shadow-brand-500/20 transition hover:-translate-y-0.5 hover:bg-brand-600" href="#umkm">Lihat UMKM</a>
+            <a class="inline-flex min-h-12 items-center justify-center rounded-full border border-brand-500/25 bg-white/70 px-6 py-3 font-semibold text-brand-700 transition hover:-translate-y-0.5 hover:bg-brand-50" href="#tentang">Jelajahi</a>
+          </div>
+
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <span class="font-semibold text-brand-700">Daftarkan UMKM anda!</span>
+            <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-brand-600 px-5 py-2.5 font-semibold text-white shadow-lg shadow-brand-500/20 transition hover:bg-brand-700" href="#tentang">Daftar disini</a>
+          </div>
+        </div>
+
+        <div class="relative flex min-h-[360px] items-center justify-center lg:min-h-[560px]">
+          <div class="absolute inset-4 mx-auto aspect-square w-full max-w-[560px] rounded-full border-4 border-white/90 bg-[radial-gradient(circle_at_35%_28%,#f5dfc0,#ead2ad_62%,#e3c38d_100%)] shadow-[inset_0_0_110px_rgba(255,255,255,0.26)]"></div>
+          <div class="relative w-[min(82%,360px)] aspect-square">
+            <div class="absolute left-1/2 top-0 h-9 w-40 -translate-x-1/2 rounded-t-2xl rounded-b-lg bg-brand-500"></div>
+            <div class="absolute left-1/2 top-5 h-10 w-7 -translate-x-[116px] skew-x-[-36deg] rounded-l-lg bg-brand-500"></div>
+            <div class="absolute left-1/2 top-5 h-10 w-7 translate-x-[92px] skew-x-[36deg] rounded-r-lg bg-brand-500"></div>
+            <div class="absolute left-1/2 bottom-4 h-24 w-32 -translate-x-1/2 rounded-b-2xl border-[10px] border-brand-500 border-t-0 bg-transparent shadow-[inset_0_-18px_0_rgba(139,90,53,0.06)]"></div>
+            <div class="absolute left-1/2 bottom-4 h-20 w-5 -translate-x-1/2 rounded-xl bg-brand-500"></div>
+          </div>
+          <div class="absolute bottom-[16%] right-[2%] rounded-full bg-white px-4 py-3 text-sm font-extrabold text-brand-700 shadow-soft sm:right-0"><%= umkmList.length %>+ UMKM</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-6 md:py-10">
+      <div class="mx-auto grid w-[min(100%-1.5rem,1180px)] gap-4 rounded-[32px] bg-white/75 p-5 shadow-soft sm:grid-cols-2 lg:grid-cols-4 lg:p-6">
+        <% stats.forEach(function(item) { %>
+          <article class="rounded-3xl px-4 py-6 text-center">
+            <strong class="block font-display text-5xl leading-none text-brand-500 sm:text-6xl"><%= item.value %></strong>
+            <span class="mt-2 block text-sm font-medium text-stone-500"><%= item.label %></span>
+          </article>
+        <% }); %>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="py-14 md:py-20">
+      <div class="mx-auto mb-7 flex w-[min(100%-1.5rem,1180px)] flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <span class="inline-flex rounded-full bg-brand-500/10 px-4 py-2 text-sm font-bold text-brand-700">Kategori Usaha</span>
+          <h2 class="mt-4 max-w-3xl font-display text-3xl font-bold leading-tight tracking-[-0.03em] text-stone-900 sm:text-4xl lg:text-5xl">Beragam bidang usaha dari para pelaku UMKM</h2>
+        </div>
+        <p class="max-w-xl leading-8 text-stone-600">Kami menata kategori dengan layout yang adaptif, sehingga tetap enak dilihat di desktop maupun layar ponsel.</p>
+      </div>
+
+      <div class="mx-auto grid w-[min(100%-1.5rem,1180px)] gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <% categories.forEach(function(item, index) { %>
+          <article class="rounded-[24px] border border-brand-500/10 bg-white/85 p-7 shadow-card transition duration-200 hover:-translate-y-1 hover:shadow-soft">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500/10 text-2xl"><%= item.icon %></span>
+            <h3 class="mt-5 text-xl font-bold text-stone-900"><%= item.title %></h3>
+            <p class="mt-2 leading-7 text-stone-600"><%= item.text %></p>
+          </article>
+        <% }); %>
+      </div>
+    </section>
+
+    <!-- ===== UMKM GRID ===== -->
+    <section id="umkm" class="py-14 md:py-20 bg-white">
+      <div class="mx-auto w-[min(100%-1.5rem,1180px)]">
+        <div class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <span class="inline-flex rounded-full bg-brand-500/10 px-4 py-2 text-sm font-bold text-brand-700">Daftar UMKM</span>
+            <h2 class="mt-4 font-display text-3xl font-bold text-stone-900 sm:text-4xl">Temukan Produk Unggulan</h2>
+            <p class="mt-2 max-w-xl text-stone-600">Klik kartu untuk melihat profil lengkap setiap usaha</p>
+          </div>
+          <span class="text-sm font-semibold text-brand-600"><%= umkmList.length %> UMKM terdaftar</span>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-2" data-umkm-filters>
+          <button type="button" class="rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-sm" data-filter="all">Semua</button>
+          <% categories.forEach(function(cat) { %>
+            <button type="button" class="rounded-full border border-brand-500/20 bg-white px-4 py-2 text-sm font-medium text-stone-600 transition hover:border-brand-500/40 hover:text-brand-700" data-filter="<%= cat.title %>"><%= cat.icon %> <%= cat.title %></button>
+          <% }); %>
+        </div>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" data-umkm-grid>
+          <% umkmList.forEach(function(u, idx) { %>
+            <div class="group cursor-pointer rounded-2xl border border-brand-500/10 bg-brand-50/60 shadow-card transition duration-300 hover:-translate-y-2 hover:shadow-hover" data-bidang="<%= u.bidang %>" onclick="location.href='/umkm/<%= u.id %>'">
+              <div class="relative h-48 overflow-hidden rounded-t-2xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-6xl text-white">
+                <%- getIcon(u.bidang) %>
+                <span class="absolute top-4 left-4 rounded-full bg-black/50 px-3 py-1 text-xs font-bold uppercase text-white"><%= u.bidang.split(' ')[0] %></span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-xl font-bold text-stone-900"><%= u.nama %></h3>
+                <p class="text-sm text-stone-500">Pemilik: <%= u.pemilik %></p>
+                <p class="mt-2 line-clamp-2 text-sm text-stone-600"><%= u.deskripsi.substring(0, 90) %><%= u.deskripsi.length > 90 ? '…' : '' %></p>
+                <div class="mt-3 flex flex-wrap items-center gap-3 text-xs text-stone-500">
+                  <span>Tahun <%= u.tahun %></span>
+                  <span class="rounded-full bg-brand-500/10 px-2.5 py-1 font-medium text-brand-700"><%= u.bidang %></span>
+                </div>
+                <p class="mt-3 font-semibold text-brand-600">
+                  Rp <%= formatRupiah(u.hargaDari) %><% if (u.hargaSampai) { %> – Rp <%= formatRupiah(u.hargaSampai) %><% } %>
+                </p>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="tentang" class="py-14 md:py-20">
+      <div class="mx-auto w-[min(100%-1.5rem,1180px)] rounded-[32px] border border-brand-500/10 bg-gradient-to-br from-white/90 to-brand-50/80 p-7 shadow-soft md:p-10">
+        <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
+          <div>
+            <span class="inline-flex rounded-full bg-brand-500/10 px-4 py-2 text-sm font-bold text-brand-700">Dukung UMKM Lokal</span>
+            <h2 class="mt-4 max-w-3xl font-display text-3xl font-bold leading-tight tracking-[-0.03em] text-stone-900 sm:text-4xl lg:text-5xl">Setiap produk yang dibeli adalah dukungan nyata bagi pertumbuhan ekonomi lokal.</h2>
+          </div>
+          <a class="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-500 px-6 py-3 font-semibold text-white shadow-lg shadow-brand-500/20 transition hover:bg-brand-600" href="#beranda">Temukan UMKM</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mt-4 bg-brand-900 py-10 text-white/90">
+    <div class="mx-auto grid w-[min(100%-1.5rem,1180px)] gap-8 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <strong class="block font-display text-2xl text-white">BonaiUMKM</strong>
+        <p class="mt-3 max-w-md leading-7 text-white/70">Platform profil dan katalog UMKM Nagari Tanjung Bonai Aur, Kabupaten Tanah Datar.</p>
+      </div>
+      <div>
+        <h3 class="mb-3 font-semibold text-white">Navigasi</h3>
+        <% menu.forEach(function(item) { %>
+          <a class="mb-2 block text-white/70 transition hover:text-white" href="<%= item.href %>"><%= item.label %></a>
+        <% }); %>
+      </div>
+      <div>
+        <h3 class="mb-3 font-semibold text-white">Kategori</h3>
+        <a class="mb-2 block text-white/70 transition hover:text-white" href="#umkm">Makanan & Minuman</a>
+        <a class="mb-2 block text-white/70 transition hover:text-white" href="#umkm">Kerajinan</a>
+        <a class="mb-2 block text-white/70 transition hover:text-white" href="#umkm">Fashion</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPT MOBILE NAV & FILTER ===== -->
+  <script>
+    const navToggle = document.querySelector('[data-nav-toggle]');
+    const mobileNav = document.querySelector('[data-mobile-nav]');
+
+    if (navToggle && mobileNav) {
+      navToggle.addEventListener('click', () => {
+        const isHidden = mobileNav.classList.contains('hidden');
+        mobileNav.classList.toggle('hidden');
+        navToggle.setAttribute('aria-expanded', String(isHidden));
+      });
+
+      mobileNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.add('hidden');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const filterButtons = document.querySelectorAll('[data-umkm-filters] [data-filter]');
+    const umkmCards = document.querySelectorAll('[data-umkm-grid] [data-bidang]');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const selected = button.dataset.filter;
+
+        filterButtons.forEach((btn) => {
+          btn.classList.remove('bg-brand-500', 'text-white', 'shadow-sm');
+          btn.classList.add('border', 'border-brand-500/20', 'bg-white', 'text-stone-600');
+        });
+        button.classList.add('bg-brand-500', 'text-white', 'shadow-sm');
+        button.classList.remove('border', 'border-brand-500/20', 'bg-white', 'text-stone-600');
+
+        umkmCards.forEach((card) => {
+          const match = selected === 'all' || card.dataset.bidang === selected;
+          card.classList.toggle('hidden', !match);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

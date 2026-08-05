@@ -1,6 +1,54 @@
-extends layout
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8b5a35">
+  <title><%= typeof title !== 'undefined' ? title : 'Terjadi Kesalahan' %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
+          },
+          colors: {
+            brand: {
+              50: '#fbf4eb',
+              100: '#f6e8d7',
+              200: '#ebcfaa',
+              300: '#ddb27d',
+              400: '#cb9155',
+              500: '#8b5a35',
+              600: '#734729',
+              700: '#5a3720',
+              800: '#43291a',
+              900: '#2a1c14'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-brand-50 text-stone-900 antialiased">
+  <main class="grid min-h-screen place-items-center px-4 py-10">
+    <section class="w-full max-w-2xl rounded-[32px] border border-brand-500/10 bg-white/90 p-8 shadow-[0_24px_60px_rgba(107,68,38,0.12)] md:p-10">
+      <span class="inline-flex rounded-full bg-brand-500/10 px-4 py-2 text-sm font-bold text-brand-700">Oops</span>
+      <h1 class="mt-4 font-display text-4xl font-bold tracking-[-0.03em] text-stone-900 sm:text-5xl"><%= message || 'Terjadi kesalahan' %></h1>
+      <p class="mt-3 text-stone-600">Status: <%= error && error.status ? error.status : 500 %></p>
 
-block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+      <% if (error && error.stack) { %>
+        <pre class="mt-6 overflow-auto rounded-2xl bg-stone-900 p-5 text-sm leading-7 text-stone-100"><%= error.stack %></pre>
+      <% } %>
+
+      <a class="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-brand-500 px-6 py-3 font-semibold text-white shadow-lg shadow-brand-500/20 transition hover:bg-brand-600" href="/">Kembali ke Beranda</a>
+    </section>
+  </main>
+</body>
+</html>
