@@ -1,82 +1,79 @@
 module.exports = [
   {
     id: 1,
-    nama: 'Keripik Singkong Bonai',
-    pemilik: 'Ibu Siti Aisyah',
-    bidang: 'Makanan & Minuman',
-    deskripsi: 'Keripik singkong renyah dengan bumbu khas Tanah Datar. Diproduksi secara higienis dan cocok untuk oleh-oleh.',
-    tahun: 2018,
-    hargaDari: 15000,
-    hargaSampai: 35000
+    nama: 'Kedai Aypo',
+    pemilik: 'Wahyu Putri Serlia',
+    deskripsi: 'Lahir dari kebiasaan di masa pandemi COVID-19 awal 2020, bisnis ini bermula dari dapur kecil dan berkembang menjadi usaha kuliner rumahan.',
+    tahun: 2020,
+    bidang: 'Makanan dan Minuman',
+    hargaDari: 5000,
+    hargaSampai: 15000,
+    badge: 'Makanan'
   },
   {
     id: 2,
-    nama: 'Rajut Bonai Craft',
-    pemilik: 'Ibu Yeni Marlina',
+    nama: 'Fika Rajut',
+    pemilik: 'Rafika',
+    deskripsi: 'UMKM FIKA RAJUT berdiri pada tahun 2023 dan berawal dari hobi pemilik dalam merajut serta membuat produk kerajinan kecil.',
+    tahun: 2023,
     bidang: 'Kerajinan',
-    deskripsi: 'Produk rajut tangan berupa tas, dompet, dan aksesoris dengan motif tradisional Minangkabau.',
-    tahun: 2019,
-    hargaDari: 45000,
-    hargaSampai: 250000
+    hargaDari: 20000,
+    hargaSampai: 200000,
+    badge: 'Kerajinan'
   },
   {
     id: 3,
-    nama: 'Kain Tenun Aur',
-    pemilik: 'Pak Ahmad Fauzi',
-    bidang: 'Fashion',
-    deskripsi: 'Kain tenun asli Nagari Tanjung Bonai Aur dengan motif khas. Tersedia per meter maupun produk jadi.',
-    tahun: 2015,
-    hargaDari: 120000,
-    hargaSampai: 850000
+    nama: 'Kopi Mase',
+    pemilik: 'Sapardi',
+    deskripsi: 'Berawal dari kebiasaan menikmati kopi hasil kebun sendiri bersama keluarga, lalu berkembang menjadi usaha kopi lokal.',
+    tahun: null,
+    bidang: 'Makanan dan Minuman',
+    hargaDari: 6000,
+    hargaSampai: null,
+    badge: 'Makanan'
   },
   {
     id: 4,
-    nama: 'Kopi Robusta Bonai',
-    pemilik: 'Pak Rudi Hartono',
-    bidang: 'Kopi & Minuman',
-    deskripsi: 'Kopi robusta lokal hasil petani nagari, diolah dan dikemas dengan standar higienis untuk pasar lokal.',
+    nama: 'Pempek Mase',
+    pemilik: 'Sapardi',
+    deskripsi: 'Berawal dari hobi mengolah makanan dan melihat peluang usaha rumahan yang terus diminati pelanggan.',
     tahun: 2020,
-    hargaDari: 35000,
-    hargaSampai: 75000
+    bidang: 'Makanan dan Minuman',
+    hargaDari: 5000,
+    hargaSampai: null,
+    badge: 'Makanan'
   },
   {
     id: 5,
-    nama: 'Dodol Durian Bonai',
-    pemilik: 'Ibu Dewi Lestari',
-    bidang: 'Makanan & Minuman',
-    deskripsi: 'Dodol durian legit dengan resep turun-temurun. Tanpa pengawet, cocok sebagai camilan keluarga.',
-    tahun: 2017,
-    hargaDari: 20000,
-    hargaSampai: 50000
+    nama: 'Kalamai Berkah',
+    pemilik: 'Kelompok Jorong Bonai',
+    deskripsi: 'Kalamai Berkah Jorong Bonai lahir pada September 2024 berkat inisiatif warga untuk mengembangkan kuliner lokal.',
+    tahun: 2024,
+    bidang: 'Makanan dan Minuman',
+    hargaDari: 15000,
+    hargaSampai: 90000,
+    badge: 'Makanan'
   },
   {
     id: 6,
-    nama: 'Anyaman Bambu Aur',
-    pemilik: 'Pak Yusuf Maulana',
-    bidang: 'Kerajinan',
-    deskripsi: 'Keranjang, tikar, dan wadah anyaman bambu buatan tangan para pengrajin lokal nagari.',
-    tahun: 2016,
-    hargaDari: 25000,
-    hargaSampai: 150000
+    nama: '4 Saudara',
+    pemilik: 'Sumarni',
+    deskripsi: 'Berawal dari permintaan kerabat dan tetangga yang sering menikmati produk olahan rumah tangga ini.',
+    tahun: 2005,
+    bidang: 'Makanan dan Minuman',
+    hargaDari: 500,
+    hargaSampai: 1000,
+    badge: 'Makanan'
   },
   {
     id: 7,
-    nama: 'Songket Mini Bonai',
-    pemilik: 'Ibu Fitri Handayani',
-    bidang: 'Fashion',
-    deskripsi: 'Songket mini dan sarung tenun untuk acara adat maupun koleksi. Motif elegan dan rapi.',
-    tahun: 2021,
-    hargaDari: 95000,
-    hargaSampai: 450000
-  },
-  {
-    id: 8,
-    nama: 'Teh Herbal Nagari',
-    pemilik: 'Ibu Mira Sari',
-    bidang: 'Kopi & Minuman',
-    deskripsi: 'Teh herbal dari tanaman lokal nagari. Segar, alami, dan cocok dinikmati kapan saja.',
-    tahun: 2022,
-    hargaDari: 18000,
-    hargaSampai: 40000
+    nama: 'Kerajinan Tenun',
+    pemilik: 'Betri Yeni',
+    deskripsi: 'Usaha tenun milik Ibu Betri Yeni berdiri sejak tahun 2023 dan menampilkan produk tenun khas lokal yang rapi.',
+    tahun: 2023,
+    bidang: 'Kerajinan dan Fashion',
+    hargaDari: 100000,
+    hargaSampai: 350000,
+    badge: 'Kerajinan'
   }
 ];

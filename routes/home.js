@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const umkmData = require('../data/umkm');  // sesuaikan path
+const umkmData = require('../data/umkm');
 
 // Fungsi pembantu
 function formatRupiah(num) {
@@ -22,9 +22,9 @@ router.get('/', function(req, res, next) {
     title: 'UMKM Nagari Tanjung Bonai Aur',
     umkmList: umkmData,
     menu: [
-      { label: 'Beranda', href: '#beranda' },
-      { label: 'UMKM', href: '#umkm' },
-      { label: 'Tentang', href: '#tentang' }
+      { label: 'Beranda', href: '/' },
+      { label: 'UMKM', href: '/umkm' },
+      { label: 'Tentang', href: '/#tentang' }
     ],
     stats: [
       { value: umkmData.length, label: 'UMKM Terdata' },
