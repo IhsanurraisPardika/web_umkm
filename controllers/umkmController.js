@@ -21,7 +21,7 @@ exports.index = function(req, res) {
     menu: [
       { label: 'Beranda', href: '/' },
       { label: 'UMKM', href: '/umkm' },
-      { label: 'Tentang', href: '/#tentang' }
+      { label: 'Tentang', href: '/tentang' }
     ],
     categories: [
       { icon: '🍜', title: 'Makanan', text: 'Kuliner rumahan dan produk siap saji' },

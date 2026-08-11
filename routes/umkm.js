@@ -29,7 +29,7 @@ router.get('/', function(req, res) {
     menu: [
       { label: 'Beranda', href: '/' },
       { label: 'UMKM', href: '/umkm' },
-      { label: 'Tentang', href: '/#tentang' }
+      { label: 'Tentang', href: '/tentang' }
     ],
     formatRupiah,
     getIcon,
