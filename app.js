@@ -6,6 +6,7 @@ const logger = require('morgan');
 
 const homeRouter = require('./routes/home');
 const umkmRouter = require('./routes/umkm');
+const detailUmkmRouter = require('./routes/detailUmkm');
 const tentangRouter = require('./routes/tentang');
 const usersRouter = require('./routes/users');
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRouter);
 app.use('/umkm', umkmRouter);
+app.use('/umkm', detailUmkmRouter);
 app.use('/tentang', tentangRouter);
 app.use('/users', usersRouter);
 
