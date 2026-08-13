@@ -26,7 +26,7 @@ router.get('/', function(req, res) {
   delete require.cache[require.resolve('../data/umkm')];
   const umkmData = require('../data/umkm');
   res.render('umkm', {
-    title: 'Daftar UMKM - BonaiUMKM',
+    title: 'Daftar UMKM - TBA UMKM',
     umkmList: umkmData,
     menu: [
       { label: 'Beranda', href: '/' },

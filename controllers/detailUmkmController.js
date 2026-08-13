@@ -64,7 +64,7 @@ exports.show = function (req, res, next) {
 	}
 
 	res.render('detailUmkm', {
-		title: `${umkm.nama} - BonaiUMKM`,
+		title: `${umkm.nama} - TBA UMKM`,
 		umkm,
 		menu: [
 			{ label: 'Beranda', href: '/' },

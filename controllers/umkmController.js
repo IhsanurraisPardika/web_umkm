@@ -16,7 +16,7 @@ function getIcon(bidang) {
 
 exports.index = function(req, res) {
   res.render('UMKM', {
-    title: 'Daftar UMKM - BonaiUMKM',
+    title: 'Daftar UMKM - TBA UMKM',
     umkmList,
     menu: [
       { label: 'Beranda', href: '/' },
