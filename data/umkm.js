@@ -74,13 +74,13 @@ module.exports = [
       marketplace: ''
     },
     // Slot Foto UMKM
-    fotoUtama: '',
+    fotoUtama: '/images/F4.jpeg',
     fotoProduk: [],
     galeri: [
-      { label: 'Foto Tempat & Galeri Rajut', url: '', icon: '🧵' },
-      { label: 'Foto Tas Rajut Unggulan', url: '', icon: '👜' },
-      { label: 'Foto Gantungan Kunci & Aksesoris', url: '', icon: '🧶' },
-      { label: 'Foto Tapak Meja Bundar', url: '', icon: '✨' }
+      { label: 'Foto Tas Rajut Lainnya', url: '/images/F1.JPG', icon: '' },
+      { label: 'Foto Tas Rajut Unggulan', url: '/images/F2.JPG', icon: '' },
+      { label: 'Foto Tas Rajut', url: '/images/F3.JPG', icon: '' },
+      { label: '', url: '/images/F5.jpeg', icon: '' }
     ],
     produkList: [
       { nama: 'Tas Rajut Handmade', harga: '100.000 - 200.000', foto: '', tag: 'Paling Diminati' },
@@ -197,13 +197,13 @@ module.exports = [
       marketplace: ''
     },
     // Slot Foto UMKM
-    fotoUtama: '/images/K1.jpg',
+    fotoUtama: '/images/K7.jpg',
     fotoProduk: [],
     galeri: [
       { label: 'Tempat Produksi Kalamai', url: '/images/K1.jpg', icon: '' },
       { label: '', url: '/images/K2.jpg', icon: '' },
       { label: '', url: '/images/K3.jpg', icon: '' },
-      { label: '', url: '/images/K5.jpg', icon: '' }
+      { label: '', url: '/images/K8.jpg', icon: '' }
     ],
     produkList: [
       { nama: 'Kalamai Kemasan Cup', harga: '15.000', foto: '', tag: 'Paling Diminati' },
@@ -279,7 +279,7 @@ module.exports = [
       marketplace: ''
     },
     // Slot Foto UMKM
-    fotoUtama: '/images/T1.JPG',
+    fotoUtama: '/images/T7.JPG',
     fotoProduk: [],
     galeri: [
       { label: 'Foto Alat Tenun & Tempat Usaha', url: '/images/T6.JPG', icon: '' },

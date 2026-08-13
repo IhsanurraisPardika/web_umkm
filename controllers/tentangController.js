@@ -3,7 +3,7 @@ const teamIhsan = {
 	jurusan: 'S-1 Sistem Informasi',
 	nim: '2311523031',
 	hp: '082384563492  ',
-	foto: '/images/IHSAN.JPG'
+	foto: '/images/gue.jpg'
 };
 
 const teamAlya = {
