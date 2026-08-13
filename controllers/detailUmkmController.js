@@ -53,7 +53,7 @@ function buildGallery(umkm) {
 	];
 }
 
-exports.show = function(req, res, next) {
+exports.show = function (req, res, next) {
 	delete require.cache[require.resolve('../data/umkm')];
 	const umkmData = require('../data/umkm');
 	const id = Number(req.params.id);

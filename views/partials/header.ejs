@@ -3,13 +3,16 @@
     <a class="flex items-center gap-3" href="/" aria-label="BonaiUMKM home">
       <span class="flex items-center gap-1.5">
         <span class="grid h-9 w-9 place-items-center">
-          <img src="/images/LOGO UNAND.png" alt="Logo UNAND" class="h-9 w-9 object-contain" onerror="this.parentElement.textContent='U'">
+          <img src="/images/LOGO UNAND.png" alt="Logo UNAND" class="h-9 w-9 object-contain"
+            onerror="this.parentElement.textContent='U'">
         </span>
         <span class="grid h-10 w-10 place-items-center">
-          <img src="/images/LOGO TBA.png" alt="Logo TBA" class="h-10 w-10 object-contain" onerror="this.parentElement.textContent='T'">
+          <img src="/images/LOGO TBA.png" alt="Logo TBA" class="h-10 w-10 object-contain"
+            onerror="this.parentElement.textContent='T'">
         </span>
         <span class="grid h-11 w-11 place-items-center">
-          <img src="/images/LOGO KKN.png" alt="Logo KKN" class="h-11 w-11 object-contain" onerror="this.parentElement.textContent='K'">
+          <img src="/images/LOGO KKN.png" alt="Logo KKN" class="h-11 w-11 object-contain"
+            onerror="this.parentElement.textContent='K'">
         </span>
       </span>
       <span class="leading-tight">
@@ -18,7 +21,9 @@
       </span>
     </a>
 
-    <button class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-brand-500/15 bg-white shadow-soft md:hidden" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+    <button
+      class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-brand-500/15 bg-white shadow-soft md:hidden"
+      type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
       <span class="sr-only">Buka menu</span>
       <span class="relative block h-4 w-5">
         <span class="absolute left-0 top-0 h-0.5 w-5 rounded-full bg-brand-700"></span>
@@ -29,21 +34,35 @@
 
     <nav class="hidden items-center gap-8 text-sm font-semibold text-stone-500 md:flex">
       <% menu.forEach(function(item) { %>
-        <a class="rounded-full px-3 py-2 transition hover:bg-brand-500/5 hover:text-brand-700" href="<%= item.label === 'Tentang' ? '/tentang' : item.href %>"><%= item.label %></a>
-      <% }); %>
-      <a class="inline-flex items-center gap-2 rounded-full bg-brand-500 px-5 py-2.5 text-white shadow-lg shadow-brand-500/20 transition hover:bg-brand-600" href="/umkm">
-        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-        <span>Admin</span></a>
+        <a class="rounded-full px-3 py-2 transition hover:bg-brand-500/5 hover:text-brand-700"
+          href="<%= item.label === 'Tentang' ? '/tentang' : item.href %>">
+          <%= item.label %>
+        </a>
+        <% }); %>
+          <a class="inline-flex items-center gap-2 rounded-full bg-brand-500 px-5 py-2.5 text-white shadow-lg shadow-brand-500/20 transition hover:bg-brand-600"
+            href="/umkm">
+            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+            <span>Admin</span></a>
     </nav>
   </div>
 
   <nav id="mobile-nav" class="mx-auto hidden w-[min(100%-1.5rem,1180px)] flex-col gap-2 pb-4 md:hidden" data-mobile-nav>
     <% menu.forEach(function(item) { %>
-      <a class="rounded-2xl border border-brand-500/10 bg-white px-4 py-3 font-medium text-stone-600 shadow-sm" href="<%= item.label === 'Tentang' ? '/tentang' : item.href %>"><%= item.label %></a>
-    <% }); %>
-    <a class="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-500 px-4 py-3 font-semibold text-white shadow-lg shadow-brand-500/20" href="/umkm">
-      <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-      <span>Admin</span>
-    </a>
+      <a class="rounded-2xl border border-brand-500/10 bg-white px-4 py-3 font-medium text-stone-600 shadow-sm"
+        href="<%= item.label === 'Tentang' ? '/tentang' : item.href %>">
+        <%= item.label %>
+      </a>
+      <% }); %>
+        <a class="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-500 px-4 py-3 font-semibold text-white shadow-lg shadow-brand-500/20"
+          href="/umkm">
+          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+          <span>Admin</span>
+        </a>
   </nav>
 </header>
