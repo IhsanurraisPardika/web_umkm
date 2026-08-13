@@ -297,14 +297,14 @@ module.exports = [
   {
     id: 8,
     nama: 'Kue Kering Annasya',
-    pemilik: '',
-    alamat: '',
-    whatsapp: '',
+    pemilik: 'Diana Gushar',
+    alamat: 'Jr. Pauh, Nagari Tanjung Bonai Aur, Sumpur Kudus, Kab. Sijunjung',
+    whatsapp: '6285319505075',
     tahun: null,
     tahunBerdiri: '',
     bidang: 'Makanan dan Minuman',
     badge: 'Makanan',
-    deskripsi: 'Usaha pembuatan aneka kue kering tradisional dan modern di Nagari Tanjung Bonai Aur.',
+    deskripsi: 'Kue Kering Annasya merupakan UMKM yang bergerak dalam pembuatan aneka kue kering tradisional dan modern di Nagari Tanjung Bonai Aur. Mengusung tagline "Nyaman di lidah ramah di kantong", usaha ini memproduksi camilan berkualitas seperti keripik pangsit. Keamanan dan kualitas produk sudah terjamin karena telah mengantongi izin P-IRT (2051303010831-28) serta sertifikasi Halal.',
     produkUtama: '',
     produkDiminati: '',
     hargaDari: null,
@@ -320,13 +320,13 @@ module.exports = [
       marketplace: ''
     },
     // Slot Foto UMKM
-    fotoUtama: '',
+    fotoUtama: '/images/AN1.JPG',
     fotoProduk: [],
     galeri: [
-      { label: 'Foto Tempat Usaha', url: '', icon: '🏪' },
-      { label: 'Foto Produk Kue Kering', url: '', icon: '🍪' },
-      { label: 'Foto Proses Pembuatan', url: '', icon: '👩‍🍳' },
-      { label: 'Foto Kemasan Kue', url: '', icon: '📦' }
+      { label: 'Tempat Usaha', url: '/images/AN3.JPG', icon: '' },
+      { label: 'Produk Kue Kering', url: '/images/AN6.JPG', icon: '' },
+      { label: 'Keripik Ubi Ungu', url: '/images/AN4.JPG', icon: '' },
+      { label: 'Foto Kemasan Kue', url: '/images/AN5.JPG', icon: '' }
     ],
     produkList: [
       { nama: 'Kue Kering Pilihan', harga: 'Sesuai Pesanan', foto: '', tag: 'Produk' },
@@ -360,13 +360,13 @@ module.exports = [
       marketplace: ''
     },
     // Slot Foto UMKM
-    fotoUtama: '',
+    fotoUtama: '/images/TP4.jpg',
     fotoProduk: [],
     galeri: [
-      { label: 'Foto Kedai Tapian Kuliner', url: '', icon: '🏪' },
-      { label: 'Foto Bakso Pentol', url: '', icon: '🍲' },
-      { label: 'Foto Aneka Minuman & Boba', url: '', icon: '🧋' },
-      { label: 'Foto Proses Pembuatan Bakso', url: '', icon: '👩‍🍳' }
+      { label: 'Foto Kedai Tapian Kuliner', url: '/images/TP1.jpg', icon: '' },
+      { label: 'Foto Bakso Pentol', url: '/images/TP2.jpg', icon: '' },
+      { label: '', url: '/images/TP3.jpg', icon: '' },
+      { label: '', url: '/images/TP4.jpg', icon: '' }
     ],
     produkList: [
       { nama: 'Bakso Pentol Spesial', harga: '5.000', foto: '', tag: 'Paling Diminati' },
@@ -378,15 +378,15 @@ module.exports = [
   {
     id: 10,
     nama: 'Warung Harian Bu Uci',
-    pemilik: '',
-    alamat: '',
-    whatsapp: '',
+    pemilik: 'Uci Ira Arisna',
+    alamat: 'Padang Tarang, Jorong Koto Tinggi, TBA',
+    whatsapp: '6282387432131',
     tahun: null,
-    tahunBerdiri: '',
+    tahunBerdiri: '2019',
     bidang: 'Perdagangan & Kebutuhan Harian',
     badge: 'Sembako',
-    deskripsi: 'Warung harian yang menyediakan kebutuhan pokok, sembako, dan aneka perlengkapan harian warga.',
-    produkUtama: '',
+    deskripsi: 'Usaha ini pada awalnya merupakan jasa fotokopi yang dirintis bersama suami selama 7 bulan. Karena dampak pandemi, usaha ini beradaptasi dengan pindah lokasi pada tahun 2022 dan beralih berjualan minyak goreng. Seiring berjalannya waktu, usaha ini berkembang pesat menjadi warung sembako harian yang lengkap. Sebagai inovasi tambahan, warung ini juga memproduksi es krim dan es mambo buatan sendiri yang dipasarkan khusus ke sekolah-sekolah sekitar.',
+    produkUtama: 'Sembako',
     produkDiminati: '',
     hargaDari: null,
     hargaSampai: null,
@@ -401,13 +401,13 @@ module.exports = [
       marketplace: ''
     },
     // Slot Foto UMKM
-    fotoUtama: '',
+    fotoUtama: '/images/U1.JPG',
     fotoProduk: [],
     galeri: [
-      { label: 'Foto Tempat Usaha', url: '', icon: '🏪' },
-      { label: 'Foto Produk & Barang Dagangan', url: '', icon: '🛒' },
-      { label: 'Foto Pelayanan Warung', url: '', icon: '👥' },
-      { label: 'Foto Suasana Toko', url: '', icon: '🏬' }
+      { label: 'Foto Tempat Usaha', url: '/images/U3.JPG', icon: '' },
+      { label: 'Foto Produk & Barang Dagangan', url: '/images/U9.JPG', icon: '🛒' },
+      { label: 'Foto Barang Dagangan', url: '/images/U11.JPG', icon: '👥' },
+      { label: 'Foto Suasana Toko', url: '/images/U5.JPG', icon: '🏬' }
     ],
     produkList: [
       { nama: 'Kebutuhan Sembako Harian', harga: 'Harga Pasar', foto: '', tag: 'Kebutuhan Pokok' },
