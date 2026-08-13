@@ -14,6 +14,8 @@ function getIcon(bidang) {
 }
 
 exports.index = function(req, res) {
+	delete require.cache[require.resolve('../data/umkm')];
+	const umkmData = require('../data/umkm');
 	res.render('home', {
 		title: 'UMKM Nagari Tanjung Bonai Aur',
 		umkmList: umkmData,

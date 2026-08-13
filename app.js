@@ -16,6 +16,7 @@ const basePort = Number(process.env.PORT) || 3000;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.disable('view cache');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -49,5 +50,6 @@ app.use(function(err, req, res, next) {
 app.listen(basePort, () => {
   console.log(`Server is running on http://localhost:${basePort}`);
 });
+
 
 module.exports = app;

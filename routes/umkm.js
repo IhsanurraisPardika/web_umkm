@@ -23,6 +23,8 @@ function getCardHeaderClass(index) {
 }
 
 router.get('/', function(req, res) {
+  delete require.cache[require.resolve('../data/umkm')];
+  const umkmData = require('../data/umkm');
   res.render('umkm', {
     title: 'Daftar UMKM - BonaiUMKM',
     umkmList: umkmData,
